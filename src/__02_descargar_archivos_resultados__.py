@@ -8,6 +8,7 @@ import pandas as pd
 # ----------------------------------------------------  DEFINICIÓN DE VARIBALES
 ROOT = os.getcwd()
 DIR_SALIDA = os.path.join(ROOT, 'datos', 'resultados')
+os.makedirs(DIR_SALIDA, exist_ok=True)
 
 # Archivo de urls para consulta
 URLS_PATH = os.path.join(ROOT, 'datos', 'urls_resultados_anuales.csv')
