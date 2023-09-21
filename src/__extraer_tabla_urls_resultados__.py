@@ -80,6 +80,9 @@ datos = DataFrame.from_dict(
     ,orient='index'
     ,columns=columnas)
 
+# Reemplazar salidas de lista vacía por nan
+datos = datos.mask(datos.map(func=str).eq(other='[]'))
+
 # Almacenar datos a archivo externo
 datos.to_csv(os.path.join(ROOT, 'datos', 'urls_resultados_anuales.csv'))
 
