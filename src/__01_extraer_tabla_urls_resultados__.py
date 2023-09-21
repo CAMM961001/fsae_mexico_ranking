@@ -86,5 +86,6 @@ datos = datos.mask(datos.map(func=str).eq(other='[]'))
 # Almacenar datos a archivo externo
 datos.to_csv(os.path.join(ROOT, 'datos', 'urls_resultados_anuales.csv'))
 
+
 if __name__ == '__main__':
     print('Trabajo ejecutado...')
