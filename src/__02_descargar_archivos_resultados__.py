@@ -41,7 +41,8 @@ for anio in URLS.index:
             archivo_internet = requests.get(doc)
 
             # Almacenar archivo en directorio correspondiente
-            with open(file=os.path.join(directorio, nombre_archivo), mode='wb') as archivo:
+            nombre_archivo = os.path.join(directorio, nombre_archivo)
+            with open(file=nombre_archivo, mode='wb') as archivo:
                 archivo.write(archivo_internet.content)
 
             # Contador de archivos descargados
